@@ -1,8 +1,11 @@
 language: php
 
+before_script:
+    - composer self-update
+
 script:
-    - composer install
-    - vender/bin/phpunit tests
+    - composer install  --prefer-source
+    - vendor/bin/phpunit tests
 
 php:
     - 5.6
